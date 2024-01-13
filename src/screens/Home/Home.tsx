@@ -1,12 +1,16 @@
-import {View, Text} from 'react-native';
+import {View, Text, Pressable} from 'react-native';
 import React from 'react';
 import styles from './Home.styles';
 
-const Home = () => {
+const Home = ({navigation}: any) => {
   return (
-    <View style={styles.container}>
+    <Pressable
+      onPress={() => {
+        navigation.push('MovieDetails');
+      }}
+      style={styles.container}>
       <Text>Home</Text>
-    </View>
+    </Pressable>
   );
 };
 
