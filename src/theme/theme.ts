@@ -1,3 +1,15 @@
+import {Dimensions} from 'react-native';
+
+interface Size {
+  width: number;
+  height: number;
+}
+
+export const DIMENSIONS: Size = {
+  width: Dimensions.get('window').width,
+  height: Dimensions.get('window').height,
+};
+
 interface Spacing {
   space_4: number;
   space_8: number;
